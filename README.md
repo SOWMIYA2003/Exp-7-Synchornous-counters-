@@ -1,5 +1,6 @@
 # Exp-6-Synchornous-counters - up counter and down counter 
-### AIM: To implement 4 bit up and down counters and validate  functionality.
+### AIM: 
+To implement 4 bit up and down counters and validate  functionality.
 ### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
 ### SOFTWARE REQUIRED:   Quartus prime
 ### THEORY 
@@ -46,43 +47,76 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 
 4-bit Count Down Counter
 ### Procedure
-/* write all the steps invloved */
+#### Step 1:
+Module Declaration. module is a keywords defined in Verilog .
+
+#### Step 2:
+Input-Output Delecaration.Clock and reset are the inputs.
+
+#### Step 3:
+Use if loop for the functionality.
+
+#### Step 4:
+Ending module. endmodule is a keywords defined in Verilog.
+
 
 
 
 ### PROGRAM 
-/*
+```
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-
-
-
-
-
+Developed by: Sowmiya N
+RegisterNumber:  212221230106
+```
+### UP COUNTER
+```
+module uc(input clk,input reset,output[0:3]counter);
+reg[0:3] counter_up;
+always@(posedge clk or posedge reset)
+begin
+if(reset)
+counter_up<=4'd0;
+else
+counter_up<=counter_up+4'd1;
+end
+assign counter=counter_up;
+endmodule
+```
+### DOWN COUNTER
+```
+module dc(input clk,input reset,output[0:3]counter);
+reg[0:3] counter_down;
+always@(posedge clk or posedge reset)
+begin
+if(reset)
+counter_down<=4'd0;
+else
+counter_down<=counter_down-4'd1;
+end
+assign counter=counter_down;
+endmodule
+```
 
 ### RTL LOGIC UP COUNTER AND DOWN COUNTER  
 
-
-
-
-
-
-
-
+### UP COUNTER
+![op](./up2.png)
+### DOWN COUNTER
+![op](./dc1.png)
 
 ### TIMING DIGRAMS FOR COUNTER  
 
-
-
-
-
+### UP COUNTER
+![op](./up3.png)
+### DOWN COUNTER
+![op](./dc3.png)
 ### TRUTH TABLE 
 
+### UP COUNTER
+![op](./uctt.png)
+### DOWN COUNTER
 
-
-
-
+![op](./ucttt.png)
 
 ### RESULTS 
+ 4 bit up and down counters are implemented and its functionality is validated successfully.
