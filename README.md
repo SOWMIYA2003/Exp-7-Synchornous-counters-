@@ -108,15 +108,17 @@ endmodule
 
 ### UP COUNTER
 ![op](./up3.png)
+![op](./ucc.png)
 ### DOWN COUNTER
 ![op](./dc3.png)
+![op](./dcc.png)
 ### TRUTH TABLE 
 
 ### UP COUNTER
-![op](./uctt.png)
+![op](./UCC1.png)
 ### DOWN COUNTER
 
-![op](./ucttt.png)
+![op](./dcc22.png)
 
 ### RESULTS 
  4 bit up and down counters are implemented and its functionality is validated successfully.
